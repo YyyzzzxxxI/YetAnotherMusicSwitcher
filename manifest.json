@@ -1,0 +1,53 @@
+{
+    "manifest_version": 3,
+    "name": "Yet Another Music Switcher",
+    "description": "Управление музыкой Яндекс и VK через горячие клавиши (Глобально, Open Source, Минимум разрешений)",
+    "version": "1.0",
+    "icons": {
+        "16": "img/16.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+    "minimum_chrome_version": "92",
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://music.yandex.ru/*",
+        "https://vk.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": "img/48.png"
+    },
+    "commands": {
+        "next_track": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+0",
+                "mac": "Command+Shift+0"
+            },
+            "description": "Next track",
+            "global": true
+        },
+        "play_pause": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+9",
+                "mac": "Command+Shift+9"
+            },
+            "description": "Pause track",
+            "global": true
+        },
+        "prev_track": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+8",
+                "mac": "Command+Shift+8"
+            },
+            "description": "Previous track",
+            "global": true
+        }
+    }
+}
